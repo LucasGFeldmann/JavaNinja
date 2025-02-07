@@ -4,17 +4,18 @@ import java.util.Scanner;
 
 
 public class Desafio2 {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         String[] ninjas = new String[10];
         byte qtd_ninjas = 0;
         byte opt = 0;
 
         Scanner scanner = new Scanner(System.in);
-        while (opt != 3) {
+        while (opt != 4) {
             System.out.println("\n===== Menu Ninja =====");
             System.out.println("1. Cadastrar Ninja");
             System.out.println("2. Listar Ninjas");
-            System.out.println("3. Sair");
+            System.out.println("3. Deletar Ninja");
+            System.out.println("4. Sair");
             System.out.print("Escolha uma opção: ");
             if (qtd_ninjas < ninjas.length) {
                 opt = scanner.nextByte();
@@ -31,12 +32,18 @@ public class Desafio2 {
                     break;
                 case 2:
                     System.out.println("Lista de Ninjas:");
-                    for (String ninja : ninjas) {
-                        if (ninja != null)
-                            System.out.println("=> " + ninja);
+
+                    for (int i = 0; i < ninjas.length; i++) {
+                        if (ninjas[i] != null) {
+                            System.out.printf("%d. %s\n",i, ninjas[i]);
+                        }
                     }
                     break;
                 case 3:
+                    ninjas[qtd_ninjas] = null;
+                    qtd_ninjas --;
+                    break;
+                case 4:
                     System.out.println("Fechando Sistema");
                     break;
                 default:
