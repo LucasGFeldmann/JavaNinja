@@ -4,7 +4,7 @@ package NivelIntermediario;
 public class Main {
     public static void main(String[] args) {
 
-        Ninja lucas = new Ninja();
+        Uchiha lucas = new Uchiha();
         lucas.nome = "Lucas GF";
         lucas.idade = 20;
         lucas.aldeia = "DNós";
@@ -13,10 +13,12 @@ public class Main {
         System.out.println(lucas.nomeEx());
         System.out.println(lucas.adulto(33));
 
-        Ninja erike = new Ninja();
+        Uchiha erike = new Uchiha();
         erike.nome = "Erike GF";
         erike.idade = 14;
         erike.aldeia = "DNós";
+
+        System.out.println(lucas.nome);
 
     }
 }
