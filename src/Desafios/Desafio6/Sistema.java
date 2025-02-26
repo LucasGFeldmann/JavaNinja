@@ -14,6 +14,10 @@ public class Sistema {
         lista.addFirst(ninja);
     }
 
+    public void removeNinja() {
+        lista.removeFirst();
+    }
+
     public List<Ninja> getLista() {
         return lista;
     }

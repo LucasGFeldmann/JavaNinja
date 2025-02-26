@@ -22,6 +22,7 @@ public class Main {
         sys.sortByName();
         System.out.println("\nOrdenado pelo Nome");
         System.out.println(sys.getLista());
+        sys.removeNinja();
 
         sys.sortByAge();
         System.out.println("\nOrdenado pelo Idade");
